@@ -1,4 +1,4 @@
-# Att göra:
+# Att göras:
 import pdb
 x = 1
 # Följ listan i mattehäftet.
