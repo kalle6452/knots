@@ -1,6 +1,6 @@
 # Att göra:
 import pdb
-x = 1
+
 # Följ listan i mattehäftet.
 import random
 lista0 = [[],[],[],
@@ -21,8 +21,10 @@ elif intj == 0:
     intp = 'x'
 print(intj)
 print(lista)
-counter = 0
-while counter <= 5:
+
+def human():
+    x = 1
+    counter = 0
     x = int(input('skriv in ett nummer'))
     while len(lista[x]) != 0:
         print('vänligen skriv in ett nytt nummer')
@@ -32,11 +34,20 @@ while counter <= 5:
     print(type(lista[x]))
     print(lista)
     counter += 1
-    rand = (random.randrange(1,9))
-    while len(lista[rand])!=0:
+def bot():
+    rand = (random.randrange(1, 9))
+    while len(lista[rand]) != 0:
         rand = (random.randrange(1, 9))
     lista[rand].append(intp)
     print(lista)
+for i in range(0,3):
+    print(lista[i])
+human()
+bot()
+human()
+bot()
+human()
+bot()
 '''x = int(input('skriv in ett nummer'))
 lista[x].append("intj")
 print(lista)
