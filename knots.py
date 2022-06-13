@@ -1,4 +1,4 @@
-# Att göras:
+# Att göra:
 import pdb
 x = 1
 # Följ listan i mattehäftet.
@@ -21,17 +21,22 @@ elif intj == 0:
     intp = 'x'
 print(intj)
 print(lista)
-
-x = int(input('skriv in ett nummer'))
-lista[x].append(intj)
-tuple(lista[x])
-print(type(lista[x]))
-print(lista)
-rand = (random.randrange(1,9))
-while len(lista[rand])!=0:
-    rand = (random.randrange(1, 9))
-lista[rand].append(intp)
-print(lista)
+counter = 0
+while counter <= 5:
+    x = int(input('skriv in ett nummer'))
+    while len(lista[x]) != 0:
+        print('vänligen skriv in ett nytt nummer')
+        x = int(input('skriv in ett nummer'))
+    lista[x].append(intj)
+    tuple(lista[x])
+    print(type(lista[x]))
+    print(lista)
+    counter += 1
+    rand = (random.randrange(1,9))
+    while len(lista[rand])!=0:
+        rand = (random.randrange(1, 9))
+    lista[rand].append(intp)
+    print(lista)
 '''x = int(input('skriv in ett nummer'))
 lista[x].append("intj")
 print(lista)
@@ -39,5 +44,7 @@ x = int(input('skriv in ett nummer'))
 lista[x].append("intj")
 print(lista)'''
 
-if lista[0] == ['x'] and lista[1] == ['x'] and lista[2] == ['x']:
+if lista[0] == [intj] and lista[1] == [intj] and lista[2] == [intj]:
+    print('vinnare')
+elif lista[0] == [intp] and lista[1] == [intp] and lista[2] == [intp]:
     print('vinnare')
